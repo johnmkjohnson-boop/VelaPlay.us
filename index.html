@@ -3,402 +3,421 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VeloPlay — Your Bike. Your Rules.</title>
-  <meta name="description" content="Turn your locked-down Peloton tablet into a wide-open training dashboard. Stream YouTube, sync to Garmin, and play immersive 3D exergames.">
-  <link rel="stylesheet" href="css/style.css">
+  <title>VeloPlay | Keep the Bike. Own the Screen.</title>
+  <meta name="description" content="VeloPlay turns a locked-down Peloton tablet into a flexible ride dashboard with live bike metrics, universal Bluetooth sync, browser access, music, and lightweight exergames.">
+  <meta name="theme-color" content="#0d1117">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- ═══════════════════════════════════════════ HEADER ═══ -->
   <header class="site-header" id="header">
-    <div class="container header-inner">
-      <a href="#" class="logo">
-        <img src="assets/logo_108.png" alt="VeloPlay" class="logo-img" width="36" height="36">
+    <div class="container nav-shell">
+      <a href="#top" class="logo" aria-label="VeloPlay home">
+        <img src="assets/logo_108.png" alt="VeloPlay logo" class="logo-img" width="40" height="40">
         <span>VeloPlay</span>
       </a>
-      <nav class="main-nav" id="main-nav">
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
         <a href="#features">Features</a>
-        <a href="#games">Games</a>
-        <a href="#garmin">Garmin Sync</a>
-        <a href="#specs">Specs</a>
+        <a href="#sync">Sync</a>
+        <a href="#flow">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="support.html">Setup Help</a>
       </nav>
+
       <div class="header-ctas">
-        <a href="support.html" class="btn btn-cta btn-sm">Book Setup Session</a>
-        <a href="#download" class="btn btn-primary btn-sm">Download APK</a>
+        <a href="support.html" class="btn btn-secondary btn-sm">Setup Session</a>
+        <a href="#download" class="btn btn-primary btn-sm">Get Started</a>
       </div>
-      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
+
+      <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
     </div>
   </header>
 
-  <!-- ═══════════════════════════════════════════ HERO ═══ -->
-  <section class="hero" id="hero">
-    <div class="hero-bg">
-      <div class="hero-glow"></div>
-      <div class="hero-grid-lines"></div>
-    </div>
-    <div class="container hero-content">
-      <h1 class="hero-headline">
-        Your Bike.<br><span class="text-gradient">Your Rules.</span>
-      </h1>
-      <p class="hero-sub">
-        Turn your locked-down Peloton tablet into a wide-open training dashboard.
-        Stream YouTube, sync to Garmin, and play immersive 3D exergames&mdash;all
-        while keeping your raw bike metrics front and center.
-      </p>
-      <div class="hero-actions">
-        <a href="support.html" class="btn btn-cta btn-lg">Book Setup Session</a>
-        <a href="#download" class="btn btn-primary btn-lg">Download Free APK</a>
-        <a href="#features" class="btn btn-ghost btn-lg">See Features</a>
-      </div>
+  <main id="top">
+    <!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+    <section class="hero">
+      <div class="hero-backdrop"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy" data-animate>
+          <span class="eyebrow">Open-source Peloton companion</span>
+          <h1>
+            <img src="assets/logo_512.png" alt="" class="hero-logo-icon" aria-hidden="true">
+            Keep the bike. Own the screen.
+          </h1>
+          <p class="hero-lead">
+            VeloPlay gives older Peloton tablets a second life with live training metrics,
+            universal Bluetooth broadcasting to smartwatches, entertainment tabs, and focused ride tools
+            that stay visible while you train.
+          </p>
 
-      <!-- Peloton tablet with VeloPlay on screen -->
-      <div class="hero-device">
-        <div class="tablet-frame">
-          <div class="tablet-bezel">
-            <div class="tablet-camera"></div>
-            <div class="tablet-screen">
-              <img src="assets/screen-catamaran.png" alt="VeloPlay running on a Peloton tablet" class="tablet-screenshot" loading="eager">
+          <div class="hero-actions">
+            <a href="#features" class="btn btn-primary btn-lg">See the Experience</a>
+            <a href="support.html" class="btn btn-ghost btn-lg">Book White-Glove Setup</a>
+          </div>
+
+          <div class="hero-proof">
+            <div class="proof-chip">
+              <strong>Bike v1/v2</strong>
+              <span>Built specifically for v1 and v2 hardware</span>
+            </div>
+            <div class="proof-chip">
+              <strong>Broadcast Metrics</strong>
+              <span>Syncs with Garmin, Apple Watch, and bike computers via Bluetooth</span>
+            </div>
+            <div class="proof-chip">
+              <strong>No Subscription</strong>
+              <span>No monthly fees, no accounts, no distractions</span>
             </div>
           </div>
-          <div class="tablet-stand"></div>
-          <div class="tablet-stand-base"></div>
+        </div>
+
+        <div class="hero-visual" data-animate>
+          <div class="device-card">
+            <div class="device-frame">
+              <img src="assets/screen-catamaran.png" alt="VeloPlay running on a Peloton tablet" class="hero-shot">
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Split-brain comparison -->
-      <div class="split-compare" id="split-compare">
-        <div class="split-side split-locked">
-          <div class="split-label"><span class="dot dot-red"></span> Locked</div>
-          <div class="split-screen">
-            <div class="fake-pelo-ui">
-              <div class="pelo-header">Peloton</div>
-              <div class="pelo-card">Join Cycling Class</div>
-              <div class="pelo-card">Join Running Class</div>
-              <div class="pelo-card">Join Strength Class</div>
-              <div class="pelo-nav">
-                <span>Home</span><span>Classes</span><span>More</span>
+    <!-- ══════════════════════════════ VIDEO ══════════════════════════════ -->
+    <section class="section video-section" id="video">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Demo Video</span>
+          <h2>See it on the bike.</h2>
+          <p>Watch a quick demo of the VeloPlay dashboard. We're currently filming the full setup walkthrough&mdash;check back soon for the deep dive.</p>
+        </div>
+
+        <div class="video-shell video-shell-full" data-animate>
+          <video class="demo-video" controls playsinline preload="metadata">
+            <source src="assets/veloplay-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div class="video-shell video-shell-placeholder video-shell-full" data-animate>
+          <div class="video-placeholder">
+            <div class="video-placeholder-icon">&#9654;</div>
+            <h3>Coming Soon: The Full Setup Guide</h3>
+            <p>The complete walkthrough from unbox to first ride is currently in production.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SIGNAL BAND ══════════════════════════════ -->
+    <section class="section signal-band">
+      <div class="container signal-grid">
+        <div class="signal-card" data-animate>
+          <span class="signal-label">Why it matters</span>
+          <h2>Great hardware shouldn't have an expiration date.</h2>
+          <p>
+            If the screen is the limiting factor, VeloPlay transforms it into an open, flexible
+            dashboard&mdash;saving your bike from the landfill.
+          </p>
+        </div>
+        <div class="signal-list" data-animate>
+          <div class="signal-item">
+            <strong>One-screen riding</strong>
+            <span>Training data stays visible while you browse, stream, or run your own apps. No more switching back and forth to see your output.</span>
+          </div>
+          <div class="signal-item">
+            <strong>Universal Sensor Sync</strong>
+            <span>Your watch or bike computer can now treat your Peloton as a standard Bluetooth sensor source.</span>
+          </div>
+          <div class="signal-item">
+            <strong>DIY or Done-For-You</strong>
+            <span>Follow our guide to install it yourself, or book a White-Glove session to have our experts handle the setup for you.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FEATURES ══════════════════════════════ -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Features</span>
+          <h2>Everything you want from your screen. All the data from your ride.</h2>
+          <p>A persistent metrics overlay ensures your training stats stay front-and-center while you stream.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card feature-card-wide" data-animate>
+            <div class="feature-copy">
+              <span class="card-tag">Persistent Metrics</span>
+              <h3>Persistent Performance HUD</h3>
+              <p>
+                The numbers that matter, always anchored. Your cadence, resistance, and output stay
+                locked on-screen, allowing you to switch between entertainment tabs without losing
+                your training flow.
+              </p>
+              <ul class="feature-points">
+                <li><strong>Instant Readability</strong> &mdash; Large, high-contrast metrics for high-intensity efforts</li>
+                <li><strong>App-Agnostic</strong> &mdash; Stays visible over browsers, media players, and games</li>
+                <li><strong>HIIT-Ready</strong> &mdash; Designed for rapid effort tracking during interval sessions</li>
+              </ul>
+            </div>
+            <div class="feature-visual">
+              <div class="hud-demo">
+                <span><strong>87</strong> RPM</span>
+                <span><strong>42</strong> RES</span>
+                <span><strong>185</strong> W</span>
+                <span><strong>00:27</strong></span>
+              </div>
+              <img src="assets/screen-youtube.png" alt="YouTube inside VeloPlay with ride HUD" class="feature-image">
+            </div>
+          </article>
+
+          <article class="feature-card" data-animate>
+            <span class="card-tag">Entertainment</span>
+            <h3>Media without the mess.</h3>
+            <p>Access the built-in browser, YouTube, and radio directly. No more app-juggling&mdash;just a smooth, unified training experience.</p>
+            <img src="assets/screen-jango.png" alt="Jango radio tab in VeloPlay" class="feature-image">
+          </article>
+
+          <article class="feature-card" data-animate>
+            <span class="card-tag">Timers</span>
+            <h3>Built-in Interval Tools</h3>
+            <p>Precision timing, zero distractions. Run structured efforts, rest blocks, and repeat intervals directly from your dashboard. No external apps required&mdash;just seamless, one-tap training.</p>
+            <img src="assets/screen-timer.png" alt="VeloPlay interval timer" class="feature-image">
+          </article>
+
+          <article class="feature-card" data-animate>
+            <span class="card-tag">Browser</span>
+            <h3>Unrestricted Web Access</h3>
+            <p>Content without compromise. Browse streaming sites, news, or route data on a full-screen utility browser that keeps your essential ride stats visible at all times.</p>
+            <img src="assets/screen-browser.png" alt="Browser view inside VeloPlay" class="feature-image">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ UNIVERSAL SYNC ══════════════════════════════ -->
+    <section class="section garmin-section" id="sync">
+      <div class="container garmin-grid">
+        <div class="garmin-copy" data-animate>
+          <span class="eyebrow">Universal Sync</span>
+          <h2>Connect your bike to your world.</h2>
+          <p>
+            VeloPlay transforms your bike into a standard Bluetooth cycling source. Now, your watch
+            or bike computer can see live power, cadence, and speed in a way that fits perfectly into
+            your existing workflow.
+          </p>
+          <div class="flow-inline">
+            <span>Peloton Bike</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span>VeloPlay</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span>Smartwatch / Computer</span>
+            <span class="flow-arrow">&rarr;</span>
+            <span>Strava / TrainingPeaks</span>
+          </div>
+        </div>
+
+        <div class="garmin-card" data-animate>
+          <div class="watch-shell">
+            <div class="watch-screen">
+              <small>INDOOR BIKE</small>
+              <strong>185<span>W</span></strong>
+              <div class="watch-row">
+                <span>87 rpm</span>
+                <span>156 bpm</span>
+              </div>
+              <div class="watch-row">
+                <span>12:34</span>
+                <span>4.2 mi</span>
               </div>
             </div>
           </div>
+          <p class="garmin-note">VeloPlay bridges the gap between your bike and your logs, ensuring every watt and pedal stroke is captured exactly where it belongs.</p>
         </div>
-        <div class="split-divider">
-          <div class="split-arrow">&#10132;</div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ HOW IT WORKS ══════════════════════════════ -->
+    <section class="section flow-section" id="flow">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">How It Works</span>
+          <h2>Transform your tablet in three simple steps.</h2>
+          <p>Designed for a quick DIY setup, or a seamless White-Glove experience if you want us to handle the heavy lifting.</p>
         </div>
-        <div class="split-side split-unlocked">
-          <div class="split-label"><span class="dot dot-cyan"></span> Unlocked</div>
-          <div class="split-screen">
-            <div class="velo-ui">
-              <div class="velo-hud">
-                <div class="hud-group">
-                  <span class="hud-metric"><span class="hud-label">CAD</span><strong>87</strong><span class="hud-unit">RPM</span></span>
-                  <span class="hud-metric hud-orange"><span class="hud-label">RES</span><strong>42</strong><span class="hud-unit">%</span></span>
-                  <span class="hud-metric"><span class="hud-label">OUT</span><strong>185</strong><span class="hud-unit">W</span></span>
-                </div>
-                <div class="hud-group">
-                  <span class="hud-metric hud-orange"><span class="hud-label">KCAL</span><strong>0</strong></span>
-                  <span class="hud-metric"><span class="hud-label">TIMER</span><strong>00:00</strong></span>
-                  <span class="hud-btn-start">START</span>
-                </div>
-              </div>
-              <div class="velo-tab-bar">
-                <span class="tab-icon tab-bt active">&#x1F50B;</span>
-                <span class="tab-icon">&#9654;</span>
-                <span class="tab-icon">&#9835;</span>
-                <span class="tab-icon">&#127760;</span>
-                <span class="tab-icon">&#9729;</span>
-                <span class="tab-icon">&#9201;</span>
-                <span class="tab-icon">&#127918;</span>
-                <span class="tab-icon">&#9881;</span>
-              </div>
-              <div class="velo-panels">
-                <div class="velo-panel panel-yt">
-                  <div class="panel-icon">&#9654;</div>
-                  YouTube
-                </div>
-                <div class="velo-panel panel-game">
-                  <div class="panel-icon">&#127795;</div>
-                  Catamaran
-                </div>
-              </div>
+
+        <div class="flow-grid">
+          <article class="flow-card" data-animate>
+            <span class="flow-step">01</span>
+            <h3>Verify compatibility</h3>
+            <p>Confirm your bike hardware version (v1 or v2) and enable developer access to prep for the VeloPlay install.</p>
+          </article>
+          <article class="flow-card" data-animate>
+            <span class="flow-step">02</span>
+            <h3>Sync the sensors</h3>
+            <p>Load VeloPlay, connect the sensor bridge, and verify that your HUD is reading live data directly from the bike.</p>
+          </article>
+          <article class="flow-card" data-animate>
+            <span class="flow-step">03</span>
+            <h3>Start your session</h3>
+            <p>Launch your favorite media, browser tabs, or timers. Your metrics stay anchored and your Bluetooth broadcast stays live.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ SELF-INSTALL ══════════════════════════════ -->
+    <section class="section install-section" id="install">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Self-Install</span>
+          <h2>The DIY Path: Quick-start installation.</h2>
+          <p>Follow these steps to unlock your tablet and start broadcasting your metrics today.</p>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card" data-animate>
+            <span class="flow-step">01</span>
+            <h3>Verify Hardware</h3>
+            <p>Confirm you are using a v1 or v2 Peloton tablet. VeloPlay is custom-optimized to bring these specific generations back to life.</p>
+          </article>
+          <article class="flow-card apk-card" data-animate>
+            <span class="flow-step">02</span>
+            <h3>Get the App</h3>
+            <p>Download the latest VeloPlay build directly to your device. This single file contains the dashboard, the browser, and the sensor bridge.</p>
+            <a class="btn btn-primary btn-sm apk-button" href="assets/VeloPlay.apk">Download VeloPlay APK</a>
+          </article>
+          <article class="flow-card" data-animate>
+            <span class="flow-step">03</span>
+            <h3>Finalize &amp; Sync</h3>
+            <p>Launch the APK and confirm your live HUD metrics are active. Once verified, sync your watch or bike computer to start your first session.</p>
+          </article>
+        </div>
+
+        <p class="download-note install-note">Prefer a guided walkthrough? If you'd rather not handle the install yourself, <a href="support.html" style="color: var(--accent);">Book a White-Glove Setup</a> and we'll get you up and running in minutes.</p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ EXERGAMES ══════════════════════════════ -->
+    <section class="section games-section">
+      <div class="container games-grid">
+        <div class="games-copy" data-animate>
+          <span class="eyebrow">Built-In Exergames</span>
+          <h2>When you want the ride to feel less like a spreadsheet.</h2>
+          <p>
+            While the HUD keeps you on track, these interactive experiences make high-intensity
+            efforts disappear into the gameplay.
+          </p>
+          <ul class="feature-points">
+            <li><strong>Real-time Steering</strong> &mdash; Linked directly to your resistance knob</li>
+            <li><strong>Dynamic Pacing</strong> &mdash; Your speed in-game is dictated by your physical RPM</li>
+            <li><strong>Visualized Intensity</strong> &mdash; Instant feedback that rewards your hardest interval blocks</li>
+          </ul>
+        </div>
+
+        <div class="games-showcase" data-animate>
+          <img src="assets/screen-catamaran.png" alt="VeloPlay catamaran exergame" class="feature-image">
+          <div class="mini-cards">
+            <div class="mini-card">
+              <strong>Solo Catamaran</strong>
+              <span>Steer with your effort. Navigate five lanes of open water using real-time resistance changes. Collect coins and hit your target zones as your bike's hardware becomes the ultimate game controller.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Outrun</strong>
+              <span>Escape the leaderboard&mdash;and the wildlife. A low-poly wilderness experience where your cadence is your only lifeline. Keep your RPM high to outpace the bears that cross your path.</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════ VIDEO ═══ -->
-  <section class="section video-section" id="video">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">See It In Action</span>
-        <h2>Watch the <span class="text-gradient">Full Review</span></h2>
-        <p class="section-sub">See VeloPlay running on a real Peloton bike — every feature, every tab, every game.</p>
-      </div>
-      <div class="video-wrapper" data-animate>
-        <div class="video-embed">
-          <!-- Replace YOUTUBE_VIDEO_ID with your actual video ID -->
-          <iframe
-            src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID"
-            title="VeloPlay Video Review"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+    <!-- ══════════════════════════════ FAQ ══════════════════════════════ -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">FAQ</span>
+          <h2>The practical questions people ask first.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" data-animate open>
+            <summary>Who is this for?</summary>
+            <p>Riders who want more from their hardware. VeloPlay is for v1 and v2 owners who want to break free from the stock software limitations and turn their tablet into a flexible, open training dashboard.</p>
+          </details>
+          <details class="faq-item" data-animate>
+            <summary>Do I need to be technical?</summary>
+            <p>Not at all. If you're comfortable with basic settings, the self-install is straightforward. If you'd rather save time, our White-Glove Setup handles everything over a quick video call to get you riding immediately.</p>
+          </details>
+          <details class="faq-item" data-animate>
+            <summary>Does it replace the bike hardware?</summary>
+            <p>The bike stays exactly as it is. VeloPlay is a software-layer upgrade. It simply unlocks the tablet's ability to display custom content and broadcast your existing sensor data to other devices via Bluetooth.</p>
+          </details>
+          <details class="faq-item" data-animate>
+            <summary>Is this affiliated with Peloton?</summary>
+            <p>VeloPlay is an independent project. We are not affiliated with Peloton Interactive. We are an independent utility built by and for owners who want to extend the life and utility of their hardware.</p>
+          </details>
+          <details class="faq-item" data-animate>
+            <summary>Do I still get my Peloton metrics?</summary>
+            <p>Absolutely. The core mission of VeloPlay is ensuring you never lose your data. Your cadence, resistance, and output stay pinned to the screen regardless of what app or game you are running.</p>
+          </details>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════════ FEATURES ═══ -->
-  <section class="section features" id="features">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Multi-Tab Advantage</span>
-        <h2>Everything on <span class="text-gradient">One Screen</span></h2>
-        <p class="section-sub">No more choosing between entertainment and training data. Swipe between tabs without losing your metrics.</p>
+    <!-- ══════════════════════════════ DOWNLOAD CTA ══════════════════════════════ -->
+    <section class="section download-section" id="download">
+      <div class="container download-shell" data-animate>
+        <span class="eyebrow">Get Started</span>
+        <h2>Choose the route that matches your comfort level.</h2>
+        <p>
+          VeloPlay is built to be powerful, not intimidating. If you are comfortable with a standard
+          manual install, the APK is ready for you below. If you want the shortest path to a perfect
+          ride, book a guided session and let us handle the details.
+        </p>
+        <div class="download-actions">
+          <a href="assets/VeloPlay.apk" class="btn btn-secondary btn-lg">Download VeloPlay APK</a>
+          <a href="support.html" class="btn btn-primary btn-lg">Book White-Glove Setup</a>
+          <a href="#flow" class="btn btn-ghost btn-lg">View Install Guide</a>
+        </div>
+
+        <div class="hero-proof download-proof">
+          <div class="proof-chip">
+            <strong>Latest Build: v1.3.0</strong>
+          </div>
+          <div class="proof-chip">
+            <strong>Remote Setup via Zoom</strong>
+          </div>
+          <div class="proof-chip">
+            <strong>Step-by-Step Walkthrough</strong>
+          </div>
+        </div>
+
+        <span class="download-note">Hardware Note: Optimized for older Peloton tablet generations (v1 &amp; v2). Exact install steps depend on your specific bike revision.</span>
       </div>
+    </section>
+  </main>
 
-      <div class="bento-grid">
-        <!-- Entertainment -->
-        <div class="bento-card bento-wide" data-animate>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
-          </div>
-          <h3>Entertainment</h3>
-          <p>YouTube and Jango Radio built right in. No Google Play Services required. Browse playlists, discover stations, and ride to your own soundtrack.</p>
-          <div class="bento-visual bento-screenshots">
-            <img src="assets/screen-youtube.png" alt="VeloPlay YouTube tab with HUD metrics" class="screenshot" loading="lazy">
-            <img src="assets/screen-jango.png" alt="VeloPlay Jango Radio tab" class="screenshot" loading="lazy">
-          </div>
-        </div>
-
-        <!-- Pro HUD -->
-        <div class="bento-card" data-animate>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>The Pro HUD</h3>
-          <p>A persistent top bar streaming Cadence, Resistance, Output, Calories, and Timer directly from the bike's proprietary sensors. Always visible, on every tab.</p>
-          <div class="bento-visual bento-hud">
-            <div class="hud-bar-demo">
-              <div class="hud-pill hud-green"><span class="hud-val">140</span> RPM</div>
-              <div class="hud-pill hud-orange-pill"><span class="hud-val">103</span> %</div>
-              <div class="hud-pill"><span class="hud-val">193</span> W</div>
-              <div class="hud-pill hud-orange-pill"><span class="hud-val">0</span> KCAL</div>
-              <div class="hud-pill"><span class="hud-val">01:09</span></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Open Browser -->
-        <div class="bento-card" data-animate>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          </div>
-          <h3>Open Browser</h3>
-          <p>Access Google News, Netflix, or your training logs via a full desktop-class browser with desktop mode toggle.</p>
-          <div class="bento-visual">
-            <img src="assets/screen-browser.png" alt="VeloPlay desktop browser showing Google News" class="screenshot screenshot-sm" loading="lazy">
-          </div>
-        </div>
-
-        <!-- Interval Timer -->
-        <div class="bento-card bento-wide" data-animate>
-          <div class="bento-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3>Rest &amp; Interval Timers</h3>
-          <p>Built-in rest timer and fully configurable HIIT interval timer. Set work/rest durations, rounds, and hit start. No third-party app needed.</p>
-          <div class="bento-visual">
-            <img src="assets/screen-timer.png" alt="VeloPlay rest timer and interval timer" class="screenshot" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ GAMES ═══ -->
-  <section class="section games" id="games">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Exergames</span>
-        <h2>Workout Through <span class="text-gradient">Play</span></h2>
-        <p class="section-sub">Stop staring at a leaderboard. Navigate a low-poly world where your physical resistance is your steering wheel.</p>
-      </div>
-
-      <div class="games-showcase">
-        <!-- River game -->
-        <div class="game-card" data-animate>
-          <div class="game-visual">
-            <img src="assets/screen-catamaran.png" alt="Solo Catamaran game — low-poly river with kayak and coin collection" class="screenshot" loading="lazy">
-          </div>
-          <div class="game-info">
-            <h3>Solo Catamaran</h3>
-            <p>Navigate your catamaran through a rushing low-poly river lined with trees and mountains. Turn the resistance knob to switch lanes, collect coins, and dodge obstacles.</p>
-            <ul class="game-features">
-              <li><strong>5-Lane HIIT Logic</strong> &mdash; Resistance knob controls your lane position</li>
-              <li><strong>Coin Collection</strong> &mdash; Grab coins as you navigate the river</li>
-              <li><strong>Progressive Difficulty</strong> &mdash; Speed and obstacles increase over time</li>
-              <li><strong>Low-Poly 3D</strong> &mdash; Beautiful water reflections and scenic mountains</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Forest game -->
-        <div class="game-card game-card-reverse" data-animate>
-          <div class="game-visual game-forest">
-            <div class="forest-scene">
-              <div class="forest-ground"></div>
-              <div class="tree tree-1">&#127794;</div>
-              <div class="tree tree-2">&#127795;</div>
-              <div class="tree tree-3">&#127794;</div>
-              <div class="biker">&#128692;</div>
-              <div class="bear">&#128059;</div>
-              <div class="speed-lines">
-                <span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-          <div class="game-info">
-            <h3>Mountain Bike: Forest Trail</h3>
-            <p>Race through a dense forest on your mountain bike. Maintain cadence to outrun the predator zones.</p>
-            <ul class="game-features">
-              <li><strong>Survival Sprints</strong> &mdash; Maintain 90+ RPM to escape bear zones</li>
-              <li><strong>Resistance Steering</strong> &mdash; Dodge trees and obstacles</li>
-              <li><strong>Low-Poly Art</strong> &mdash; Sunset-lit forest atmosphere</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ GARMIN ═══ -->
-  <section class="section garmin" id="garmin">
-    <div class="container">
-      <div class="garmin-layout">
-        <div class="garmin-text">
-          <span class="section-tag">Garmin Integration</span>
-          <h2>Finally, a <span class="text-gradient">Perfect Sync.</span></h2>
-          <p>VeloPlay transforms your bike into a standard Bluetooth Power &amp; Speed sensor. Your Garmin watch "sees" the bike natively.</p>
-          <p>No more manual entry&mdash;your power curves, VO2 Max, and Training Load sync automatically to Garmin Connect and Strava.</p>
-          <div class="sync-flow">
-            <div class="sync-node">
-              <div class="sync-icon">&#128690;</div>
-              <span>Peloton Bike</span>
-            </div>
-            <div class="sync-arrow">&rarr;</div>
-            <div class="sync-node node-velo">
-              <div class="sync-icon">&#9889;</div>
-              <span>VeloPlay</span>
-            </div>
-            <div class="sync-arrow">&rarr;</div>
-            <div class="sync-node">
-              <div class="sync-icon">&#9201;</div>
-              <span>Garmin Watch</span>
-            </div>
-            <div class="sync-arrow">&rarr;</div>
-            <div class="sync-node">
-              <div class="sync-icon">&#9729;</div>
-              <span>Garmin Connect / Strava</span>
-            </div>
-          </div>
-        </div>
-        <div class="garmin-visual">
-          <div class="garmin-watch">
-            <div class="watch-bezel">
-              <div class="watch-screen">
-                <div class="watch-label">CYCLING</div>
-                <div class="watch-metric-row">
-                  <div class="watch-big">185<span>W</span></div>
-                </div>
-                <div class="watch-small-row">
-                  <div>87 rpm</div>
-                  <div>156 bpm</div>
-                </div>
-                <div class="watch-small-row">
-                  <div>12:34</div>
-                  <div>4.2 mi</div>
-                </div>
-              </div>
-            </div>
-            <div class="bt-badge">BT</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ SPECS ═══ -->
-  <section class="section specs" id="specs">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Under the Hood</span>
-        <h2>Technical <span class="text-gradient">Specs</span></h2>
-      </div>
-      <div class="specs-grid">
-        <div class="spec-card" data-animate>
-          <div class="spec-icon">&#9889;</div>
-          <h4>Zero Latency</h4>
-          <p>Native <code>lib-grupetto</code> sensor bridge for real-time metric streaming with no perceptible delay.</p>
-        </div>
-        <div class="spec-card" data-animate>
-          <div class="spec-icon">&#128274;</div>
-          <h4>Privacy First</h4>
-          <p>100% local data processing. No health data leaves the bike. Ever.</p>
-        </div>
-        <div class="spec-card" data-animate>
-          <div class="spec-icon">&#128260;</div>
-          <h4>Legacy Support</h4>
-          <p>Optimized specifically for Peloton v1 and v2 tablets (Android 7&ndash;9).</p>
-        </div>
-        <div class="spec-card" data-animate>
-          <div class="spec-icon">&#128268;</div>
-          <h4>Bluetooth Bridge</h4>
-          <p>Broadcasts standard BLE Power &amp; Speed profiles. Compatible with any ANT+/BLE fitness device.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ DOWNLOAD ═══ -->
-  <section class="section download" id="download">
-    <div class="container download-content">
-      <h2>Ready to <span class="text-gradient">Unlock</span> Your Bike?</h2>
-      <p>Free. Open-source. No account required.</p>
-      <div class="hero-actions">
-        <a href="support.html" class="btn btn-cta btn-xl">Book Setup Session</a>
-        <a href="#" class="btn btn-primary btn-xl">Download VeloPlay APK</a>
-      </div>
-      <span class="download-note">Requires Peloton tablet with USB debugging enabled</span>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════════ FOOTER ═══ -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="#" class="logo">
-          <img src="assets/logo_108.png" alt="VeloPlay" class="logo-img" width="24" height="24">
-          <span>VeloPlay</span>
-        </a>
-      </div>
+    <div class="container footer-compact">
+      <a href="#top" class="logo">
+        <img src="assets/logo_108.png" alt="VeloPlay logo" class="logo-img" width="24" height="24">
+        <span>VeloPlay</span>
+      </a>
       <div class="footer-links">
         <a href="#features">Features</a>
-        <a href="#games">Games</a>
-        <a href="#garmin">Garmin</a>
-        <a href="#specs">Specs</a>
+        <a href="#sync">Sync</a>
+        <a href="#faq">FAQ</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="support.html">Support</a>
       </div>
-      <div class="footer-legal">
-        <p>VeloPlay is an independent project. We are not affiliated with Peloton Interactive, Inc. This is a free, open-source utility for fitness enthusiasts.</p>
-        <p class="copyright">&copy; 2026 VeloPlay. All rights reserved.</p>
-      </div>
+      <p class="footer-legal">Not affiliated with Peloton Interactive, Inc.</p>
     </div>
   </footer>
 
